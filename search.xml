@@ -1,54 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[python学习笔记——修改添加和删除元素]]></title>
-    <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%2F</url>
-    <content type="text"><![CDATA[在列表中任意位置插入元素123motorcycles=['honda','yamaha','suzuki']motorcycles.insert(0,'ducati')print(motorcycles) 方法insert()在索引0处添加空间，并将值’ducati’存储到这个地方。这种操作将列表中既有的每个元素都右移一个位置： 从列表中删除元素使用del语句删除元素1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[0]print(motorcycles) 使用del删除了列表motorcycles中的第一个元素——‘honda’： 使用del可删除任何位置处的列表元素，条件是知道其索引。下例演示了如何删除前述列表中的第二个元素——‘yamaha’： 1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[1]print(motorcycles) 使用pop()删除元素]]></content>
-      <categories>
-        <category>python</category>
-        <category>python学习笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>python学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[内嵌专业知识和经验的机器学习方法探索—【一】：引导学习的提出与理论基础]]></title>
-    <url>%2F2017%2F11%2F19%2F%E5%86%85%E5%B5%8C%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86%E5%92%8C%E7%BB%8F%E9%AA%8C%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%8E%A2%E7%B4%A2%E2%80%94%E3%80%90%E4%B8%80%E3%80%91%EF%BC%9A%E5%BC%95%E5%AF%BC%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%8F%90%E5%87%BA%E4%B8%8E%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[摘要​ 简要介绍机器学习的发展历程，分析了典型机器学习算法的主要特征及局限性。然后，结合电力领域特征，分别从工程实际、研究机理和“知识资产管理”需要 3 个层面，探讨了电力领域对机器学习方法的要求。在此基础上通过将专业知识和经验进行数学化表示和封装，提出一种嵌入“知识函数单元”的机器学习方法——引导学习，重点研究其理论基础、架构和原理。引导学习的主要特点是结合了领域知识经验和机器学习，提供了一种知识分析与数据挖掘相融合的机器学习范式，探索了人机协同混合增强智能的实现机理和电力知识资产传承管理的可行路线。最后，探讨了需进一步研究的问题。 关键词：引导学习；知识；经验；机器学习；人工智能；智能电网；健康诊断 ​ Alpha Go 击败围棋高手、无人驾驶汽车上路、医疗机器人 Watson 诊断出世界稀有病例，标志着人工智能，特别是机器学习(machine learning，ML)技术正在走向主流，备受各行业关注。与此同时，电力系统承载着越来越多的可再生新能源和电动汽车等主动式负荷，正在发展为信息与物理系统高度融合的能源互联网，不断产生维度高、类型广、体量大的数据资源。传统地单纯依靠物理建模分析的理念方法，已无法充分适应智能电网高维、时变、非线性、受内外部多物理参量(环境、气候、工况等)影响所带来的综合挑战$^{[3-5]}$。 ​ 如何在电力系统管控各环节，全面有效利用 ML 技术，让计算机从电源出力数据、电网潮流数据、用电负荷数据等诸多实际场景中发现问题、挖掘规律、辅助决策，以支持电力系统规划、调度、检修、营销各生产实践环节，是当前备受电力领域关注的热点难点。 ​ 传统 ML 算法主要对数据的搜索、分类、比较、聚类、关联等进行分析和归纳。在电力领域，一些学者应用支持向量机、Logistics 回归等，在新能源发电预测、用户用电行为模式识别等多场景中取得有益结果。然而，当前一些机器学习算法，如深度学习局限性 其输入一般需要足量且有效的训练样本。而在诸如电网故障诊断等应用场景中，获得足量的表征电网异常状态的样本较困难，且通常代价昂贵 其任务多针对边界确定的封闭环境，一旦环境开放、多变，可能导致结果失准、鲁棒性差。而电力系统是开放动态系统，源–荷端皆存在不确定性和随机性，加之运行工况、环境时刻变化，导致现有 ML 算法尚未在诸如电网调度等对安全性、鲁棒性要求高的场景中充分应用 其算法多为“黑箱模型”，在样本训练过程中，未有效利用电力系统相关知识对学习器进行指导，而仅仅挖掘样本数据的“表象”规律，导致训练的模型往往“只知结果，不明就里”，对电力系统生产实践的指导能力有限。 ​ ​ 一方面，电力领域的知识、经验或经过严格数学论证，或在长期生产实践中形成，实际指导价值巨大；另一方面，ML 能够对数据进行智能分析，善于发现潜在问题、挖掘隐性规律。如果能在 ML 算法中融入一定的知识经验，以引导学习器对数据样本进行挖掘，例如，当学习器沿着正确的方向挖掘规律时予以肯定、强化，反之则进行纠偏、弱化，就可能实现学习器对输入样本要求的降低，对输出结果安全性、鲁棒性等性能的提升，并有望开发出更为通用的 ML 方法、覆盖更广的学习任务、拓宽其在电力领域的应用价值。]]></content>
-      <categories>
-        <category>电力系统</category>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>电力系统</tag>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[photoshop cc 2018 安装教程]]></title>
-    <url>%2F2017%2F11%2F17%2Fphotoshopp-cc2018%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[第一步：注册个Adobe ID，【点击这里下载】安装Adobe Creative Cloud 桌面APP。 注册完成后进行邮箱验证 下载并安装creative cloud 第二步：打开桌面上的Adobe Creative Cloud软件，登录你的账号。打开首选项，在APP选项中更改软件安装语言和默认的安装路径。默认路径为 ”C:\Program Files\Adobe。如果你不想更改 跳过这步即可。 第三步：在Apps中，选择想安装试用的Adobe软件， Creative Cloud会自动在线下载软件并自动安装。下载速度相当不错，当然这取决于你的宽带。 第四步：软件安装完成后，将AMT Emulator破解工具复制在安装目录中，第二步你设置在哪里就哪里，默认路径为（”C:\Program Files\Adobe”）点击应用即可。 AMT Emulator 点击下载 密码：zuen 至此，安装破解完成 如果 桌面中找不到ps 在桌面添加ps快捷方式即可 打开 ps 帮助里 出现AMTEMU by PAINTER 表示破解成功]]></content>
-      <categories>
-        <category>photoshop</category>
-      </categories>
-      <tags>
-        <tag>photoshop</tag>
-        <tag>安装教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[基于动态风电穿透功率极限的黑启动方案制定]]></title>
-    <url>%2F2017%2F11%2F17%2F%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E9%A3%8E%E7%94%B5%E7%A9%BF%E9%80%8F%E5%8A%9F%E7%8E%87%E6%9E%81%E9%99%90%E7%9A%84%E9%BB%91%E5%90%AF%E5%8A%A8%E6%96%B9%E6%A1%88%E5%88%B6%E5%AE%9A%2F</url>
-    <content type="text"><![CDATA[基于动态风电穿透功率极限的黑启动方案制定文章链接 ：道客巴巴 摘要诱发大停电的因素： 自然灾害、设备故障、人为误操作 DWPPL: Dynamic wind Power Penetration Limit 动态风电穿透功率极限 CCP：Chance Constrained Programming 机会约束规划 TBSS: Traditional Black Start Scheme 对传统黑启动方案 BSSD: Black Start Scheme based on DWPPL 基于DWPPL 制定黑启动方案 研究现状已有的研究证明了风电参与黑启动的可行性和价值，但未给出风电接入量的具体计算方法和确定准则 数学模型动态风电穿透功率极限的概念 风电穿透功率极限 R_w=P_{ins _\Sigma max} /P_{load\max} \tag{1}$P_{ins _\Sigma max} $ 表示系统可接纳的最大风电总装机容量。 $P_{load\max} $ 是系统的最大负荷 动态风电穿透功率极限 由于黑启动过程中网架不断恢复和扩张，系统接纳风电能力不断增长。因此在式(1)的基础上提出动态风电穿透功率极限的概念。 R_{dw}=P_{a_\Sigma max} /P_{G_\Sigma} \tag{2}$P_{a_\Sigma max}$ 是黑启动某时段系统能接纳的最大总接入容量 $P_{G_\Sigma}$ 是黑启动某时段系统内并网发电机的总额定容量 求解DWPPL的CCP模型假定若绝大多数历史风况下系统接入某容量的风电都能安全运行，则认定系统可接纳该容量风电 CCP模型如式(3)所示。模型中约束条件依次为：系统频率约束、电压约束、线路传输功率约束、发电机出力(有功、无功)约束和潮流平衡约束 \begin{align} &\max \,\, P_{a_\Sigma}=\sum_{i=1}^{n_w} P_{ai}\\ &s.t.\quad \begin{cases} Prob\{f_{min}\le f_{max}\}\ge \alpha_1\\ \tag{3} Prob\{V_{min}\le V_{max}\}\ge \alpha_2\\ P_L \le P_{Lmax}\\ P_{g\,min} \le P_g \le P_{g\,max}\\ Q_{g\,min} \le Q_g \le Q_{g\,max}\\ \sum\limits_{i=1}^{n_w} P_{wi}+ \sum\limits_{j=1}^{n_g} P_{gj}=\sum\limits_{k=1}^{n_d} P_{dk}+ \sum\limits_{m=1}^{n_l} P_{lm} \end{cases} \end{align} 符号 含义 $P_{\alpha}$ 为风电接入为风电接入容量，是一个列向量，其元素$P_{ai}$是指第$i$个风电场中所有并网风力发电机额定容量的总和 $P_{\alpha_\Sigma}$ 为风电总接入容量 $\alpha$ 置信水平，取值大小代表着对系统安全性的重视程度 $P_l$ 为支路传输功率 $P_l$ 为支路损耗功率 $n_w$为风电场的数量；$n_g$ 为包括黑启动和非黑启动机组在内的发电机组总数；$n_d $为负荷的数量；$n_l$ 为包括线路和变压器在内的支路总数。 为简化分析，将每个风电场等效为一台大的风力发电机 风电出力$P_w$与风电接入容量$P_\alpha$有以下关系 P_w= \begin{cases} 0 &\textrm{$v_w \le v_{ci}$或$v_w\ge v_{co}$}\\ \frac{P_{\alpha}}{v_r^3-v_{ci}^3}(v_w^3-v_{ci}^3)&\textrm{$v_{ci}\le v_w \le v_r$}\\ P_a &\textrm{$v_w\ge v_r$}\\ \end{cases}式中$v_w$为风机轮毂高度处的风速，$v_{ci}$为切入风速，$v_{co}$为切出风速，$v_r$为额定风速。 12function [P_w]=windPowerOutput(v_w,v_ci,v_co,v_r)% P_w DWPPL模型求解选用遗传算法求解DWPPL ​ 以多个风场的风电接入容量组成的列向量$P_a$作为染色体个体，以式(3)的目标函数为适应度函数,为了保证个体的有效性，需要对所有个体进行等式及不等式约束校验，剔除其中不满足约束的个体，并重复此次遗传操作直到生成新的满足约束条件的个体以维持种群大小。通过多代遗传最终进化出最优的染色体得到$P_{\alpha _\Sigma max}$ ，继而根据公式(2) 即可求得DWPPL。 ​ 适用于黑启动的风电并网操作原则和假设 大停电后，系统必须恢复至一定容量规模才能接入风电。本文假定系统只有在黑启动电源成功启动至少一台机组，形成两机并列运行的小系统后方可接入风电。 风电场必须具备一定的风速条件才允许接入系统本文假定在预测的未来30min 风速下，利用公式(4)求得的风电场出力都在额定出力的10%以上时才考虑风电场并网。 由于黑启动初期系统较薄弱，频繁的投切风力发电机会引起系统频率和电压的波动、进而威胁系统的稳定，因此本文假定系统不会为了增加风电总接入容量而在风速正常的情况下主动切除某个已并网风电场的部分容量。 风电并网后只要能连续稳定运行一定时长，就可判定此风电对系统恢复有价值。多数情况下一台非黑启动机组需要花费1~3h 时间启动(非冷态启动)，因此如果系统接入某容量的风电后能稳定运行3h，就可认定此风电有助于非黑启动机组的启动、对系统恢复是有价值的。 1） 确定黑启动电源；2） 在不计及风电的情况下，确定非黑启动机组的恢复顺序；3） 依次搜索黑启动电源或初期带电系统至各待恢复机组的最优恢复路径；4） 待风电场附近节点带电后，为风电场充电可靠的供电路径；5） 待系统达到接纳风电的最小容量规模后开始监测风电场的风速预测曲线，当风速合适时计算DWPPL，并接入相应量风电；6） 风电接入之后，根据预测的风速计算其未来30min 的平均出力，以此作为启动功率的增加量，恢复优先级较高的机组厂用负荷或个别重要负荷；7） 定时刷新DWPPL，并据此更新风电的接入容量；8） 重复步骤6~7，直到黑启动阶段结束。综上所述，得到BSSD 的制定流程如图1 所示。]]></content>
-      <categories>
-        <category>毕业论文</category>
-        <category>电力系统故障恢复论文笔记</category>
-      </categories>
-      <tags>
-        <tag>电力系统</tag>
-        <tag>黑启动</tag>
-      </tags>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[github学习笔记]]></title>
+      <url>/2017/11/30/github%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> github </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[matlabGUI学习笔记]]></title>
+      <url>/2017/11/28/matlabGUI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ceil  		% 向无穷大方向取整</span><br><span class="line">floor 		% 向无穷小方向取整</span><br><span class="line">fix  		% 向0取整</span><br><span class="line">round        % 四舍五入</span><br><span class="line">isinteger    % 判断输入是否为整数数组</span><br><span class="line">isnumeric    % 判断输入是否为数值数组</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eps          浮点数相对精度</span><br></pre></td></tr></table></figure>
+<p>复数的生成方式</p>
+<p>a=2+0i   这种方法不能生成虚部为0的复数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c=complex(a,b)     % 生成复数c，且c=a+bi</span><br><span class="line"></span><br><span class="line">从复数中提取实部和虚部分别用</span><br><span class="line">real</span><br><span class="line">imag</span><br></pre></td></tr></table></figure>
+<p>常用其他函数</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isnan</td>
+<td>检查是否为NaN</td>
+</tr>
+<tr>
+<td>isinf</td>
+<td>检查是否为无穷大或无穷小</td>
+</tr>
+<tr>
+<td><strong>setdiff</strong></td>
+<td><strong>返回第一个向量中存在而第二个向量中不存在的元素</strong></td>
+</tr>
+<tr>
+<td><strong>setxor</strong></td>
+<td><strong>返回两个向量中 单独存在的元素</strong></td>
+</tr>
+<tr>
+<td><strong>nnz</strong></td>
+<td><strong>返回矩阵中非零元素的个数</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>注意： 一般不用find函数查找数组的下标，数组下标直接用逻辑数组来代替，效率更高</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=1:100;</span><br><span class="line">a(find(a&lt;10))     % 不要用这种方法</span><br><span class="line"></span><br><span class="line">直接用  </span><br><span class="line">a(a&lt;10)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">format compact   % 临时修改当前命令行窗口文本的显示方式为紧凑形式</span><br></pre></td></tr></table></figure>
+<p><strong>any和all的说明</strong></p>
+<ul>
+<li>any</li>
+</ul>
+<p>B=any(A)     A非全零返回真，全零返回假。忽略NaN值</p>
+<hr>
+<p>B=any(A,dim)</p>
+<p>dim=1  列向量非全零返回真，否则返回假 返回行向量</p>
+<p>dim=2  行向量非全零返回真，否则返回假 返回列向量</p>
+<hr>
+<p>B=all(A)    A所有元素非零返回真，否则返回假 忽略NaN值</p>
+<p>B=all(A,dim)</p>
+<hr>
+<p>用[]创建二维字符数组时，必须保证每行有相同的长度</p>
+<p>用char函数创建二维数组，函数会自动在短的字符数组后加空格，使其长度一致。</p>
+<hr>
+<p>c=cellstr(S) </p>
+<hr>
+<p>t=strcat(s1,s2,s3,…)</p>
+<p>依次横向连接字符数组s1，s2,s3…</p>
+<hr>
+<p>S=strvcat(t1,t2,t3,…)</p>
+<p>依次纵向连接字符数组t1，t2，t3…</p>
+<hr>
+<p>S=char(t1,,t2,t3,…)</p>
+<p>创建二维数组，短的字符串后加空格，使每行长度一致</p>
+<p>S=char(C) 也可以将字符串单元数组C转换为二维字符数组</p>
+<hr>
+<p>tf=ischar(A)  A为字符数组返回真，否则返回假</p>
+<hr>
+<p>c=cellstr(S)   生成字符串单元数组</p>
+<hr>
+<p>tf=iscellstr(A) 判断A是否为字符串单元数组</p>
+]]></content>
+      
+        <categories>
+            
+            <category> matlab </category>
+            
+            <category> matlabgui </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> matlab </tag>
+            
+            <tag> matlabgui </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python学习笔记——修改添加和删除元素]]></title>
+      <url>/2017/11/22/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0/</url>
+      <content type="html"><![CDATA[<h3 id="在列表中任意位置插入元素"><a href="#在列表中任意位置插入元素" class="headerlink" title="在列表中任意位置插入元素"></a>在列表中任意位置插入元素</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
+<p>方法insert()在索引0处添加空间，并将值’ducati’存储到这个地方。这种操作将列表中既有的每个元素都右移一个位置：</p>
+<h3 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h3><h4 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]</span><br><span class="line">print(motorcycles)</span><br><span class="line">del motorcycles[0]</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
+<p>使用del删除了列表motorcycles中的第一个元素——‘honda’：</p>
+<p>使用del可删除任何位置处的列表元素，条件是知道其索引。下例演示了如何删除前述列表<br>中的第二个元素——‘yamaha’：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]</span><br><span class="line">print(motorcycles)</span><br><span class="line">del motorcycles[1]</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
+<h4 id="使用pop-删除元素"><a href="#使用pop-删除元素" class="headerlink" title="使用pop()删除元素"></a>使用pop()删除元素</h4>]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+            <category> python学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> python学习笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
 </search>
