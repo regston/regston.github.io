@@ -13,8 +13,8 @@
   </entry>
   <entry>
     <title><![CDATA[win下配置hexo]]></title>
-    <url>%2F2017%2F12%2F18%2Fwin%E4%B8%8B%E9%85%8D%E7%BD%AEhexo%2F</url>
-    <content type="text"><![CDATA[什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请提交问题，我会尽力解决您的问题。 安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序： Node.js Git 安装 Hexo1$ npm install -g hexo-cli npm install hexo-deployer-git --save]]></content>
+    <url>%2F2017%2F12%2F18%2Fhexo%E9%85%8D%E7%BD%AE%E5%AE%8C%E5%85%A8%E5%AF%BC%E5%BC%95%2F</url>
+    <content type="text"><![CDATA[什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请提交问题，我会尽力解决您的问题。 安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序： Node.js Git 安装 Hexo1$ npm install -g hexo-cli npm install hexo-deployer-git --save 给hexo个人博客 next主题添加背景图片 首先找到一个背景图片放到 hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; images 的路径下； hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; css -&gt; _custom ，找到路径下的custom.styl文件，在文件的最上方加上一代码 body { background:url(/images/backGround.jpg（这是你之前加的背景图片的名字）);} 就完事了。]]></content>
       <categories>
         <category>hexo</category>
       </categories>
