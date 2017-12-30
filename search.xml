@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Github简明教程]]></title>
+    <url>%2F2017%2F12%2F19%2Fgithub%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[什么是Github​ GitHub 是为开发者提供Git 仓库的托管服务。这是一个让开发者与朋友、同事、同学及陌生人共享代码的完美场所。GitHub 公司总部位于美国旧金山，拥有一只不知是章鱼还是猫的吉祥octocat。 GitHub 与Git 的区别​ 在Git 中，开发者将源代码存入名叫“Git 仓库”的资料库中并加以使用。而GitHub 则是在网络上提供Git 仓库的一项服务。也就是说，GitHub 上公开的软件源代码全都由Git 进行管理。 Windows下Git的安装在Windows 环境中，最简单快捷的方法是使用msysGit。安装包下载完毕后，只要双击运行，按照向导一步步安装即可。 初始设置设置姓名和邮箱地址首先来设置使用Git 时的姓名和邮箱地址。名字请用英文输入。 12$ git config --global user.name &quot;Firstname Lastname&quot;$ git config --global user.email &quot;your_email@example.com&quot; 这里设置的姓名和邮箱地址会用在Git 的提交日志中。 提高命令输出的可读性顺便一提，将color.ui 设置为auto 可以让命令的输出拥有更高的可读性。 1$ git config --global color.ui auto 使用Github的前期准备创建账户打开账户创建页面，填写完所有项目后点击Create an account，就能完成账户的创建。 设置SSH KeyGitHub 上连接已有仓库时的认证，是通过使用了SSH 的公开密钥认证方式进行的。现在让我们来创建公开密钥认证所需的SSH Key，并将其添加至GitHub 运行下面的命令创建SSH Key。 1234567$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;Generating public/private rsa key pair.Enter file in which to save the key(/Users/your_user_directory/.ssh/id_rsa): 按回车键Enter passphrase (empty for no passphrase): 输入密码Enter same passphrase again: 再次输入密码 “your_email@example.com”的部分请改成您在创建账户时用的邮箱地址。密码需要在认证时输入，请选择复杂度高并且容易记忆的组合。输入密码后会出现以下结果。 123456789Your identification has been saved in /Users/your_user_directory/.ssh/id_rsa.Your public key has been saved in /Users/your_user_directory/.ssh/id_rsa.pub.The key fingerprint is:fingerprint值 your_email@example.comThe key&apos;s randomart image is:+--[ RSA 2048]----+| .+ + || = o O . |.... id_rsa 文件是私有密钥，id_rsa.pub 是公开密钥。 添加公开密钥在GitHub 中添加公开密钥，今后就可以用私有密钥进行认证了。 点击右上角的账户设定按钮（Account Settings），选择SSH Keys 菜单。点击Add SSH Key 之后，会出现如图3.2 的输入框。在Title 中输入适当的密钥名称。Key 部分请粘贴id_rsa.pub 文件里的内容。id_rsa.pub的内容可以用如下方法查看。 12$ cat ~/.ssh/id_rsa.pubssh-rsa 公开密钥的内容 your_email@example.com 添加成功之后，创建账户时所用的邮箱会接到一封提示“公共密钥添加完成”的邮件。 完成以上设置后，就可以用手中的私人密钥与GitHub 进行认证和通信了。让我们来实际试一试。 1234$ ssh -T git@github.comThe authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.RSA key fingerprint is fingerprint值 .Are you sure you want to continue connecting (yes/no)? 输入yes 出现以下结果即为成功 12Hi hirocastest! You&apos;ve successfully authenticated, but GitHub does notprovide shell access. 使用社区功能在创建账户后不妨试试Follow（关注）别人。在用户信息页面的右上角点击如图3.3 所示的按钮即可 这样一来，您所Follow 的用户的活动就会显示在您的控制面板页面中。您可以通过这种方法知道那个人在GitHub 上都做了些什么。]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[win下配置hexo]]></title>
     <url>%2F2017%2F12%2F18%2Fwin%E4%B8%8B%E9%85%8D%E7%BD%AEhexo%2F</url>
-    <content type="text"><![CDATA[什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请提交问题，我会尽力解决您的问题。 安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序： Node.js Git 安装 Hexo]]></content>
+    <content type="text"><![CDATA[什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请提交问题，我会尽力解决您的问题。 安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序： Node.js Git 安装 Hexo1$ npm install -g hexo-cli npm install hexo-deployer-git --save]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[github学习笔记]]></title>
-    <url>%2F2017%2F11%2F30%2Fgithub%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>github</category>
-      </categories>
-      <tags>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -36,6 +36,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[python学习--10分钟看懂函数]]></title>
+    <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0--10%E5%88%86%E9%92%9F%E7%9C%8B%E6%87%82%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[Python函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。 定义一个函数你可以定义一个由自己想要功能的函数，以下是简单的规则： 函数代码块以 def 关键词开头，后接函数标识符名称和圆括号() 和： 任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。 ​ 1234def functionname( parameters ): "函数_文档字符串" function_suite return [expression]]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python学习笔记——修改添加和删除元素]]></title>
     <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%2F</url>
     <content type="text"><![CDATA[在列表中任意位置插入元素123motorcycles=['honda','yamaha','suzuki']motorcycles.insert(0,'ducati')print(motorcycles) 方法insert()在索引0处添加空间，并将值’ducati’存储到这个地方。这种操作将列表中既有的每个元素都右移一个位置： 从列表中删除元素使用del语句删除元素1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[0]print(motorcycles) 使用del删除了列表motorcycles中的第一个元素——‘honda’： 使用del可删除任何位置处的列表元素，条件是知道其索引。下例演示了如何删除前述列表中的第二个元素——‘yamaha’： 1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[1]print(motorcycles) 使用pop()删除元素]]></content>
@@ -46,17 +57,6 @@
       <tags>
         <tag>python</tag>
         <tag>python学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[python学习--10分钟看懂函数]]></title>
-    <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0--10%E5%88%86%E9%92%9F%E7%9C%8B%E6%87%82%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[Python函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。 定义一个函数你可以定义一个由自己想要功能的函数，以下是简单的规则： 函数代码块以 def 关键词开头，后接函数标识符名称和圆括号() 和： 任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。 ​ 1234def functionname( parameters ): "函数_文档字符串" function_suite return [expression]]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
