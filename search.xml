@@ -11,4 +11,28 @@
         <tag>Github</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[python学习笔记——修改添加和删除元素]]></title>
+    <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%2F</url>
+    <content type="text"><![CDATA[在列表中任意位置插入元素123motorcycles=['honda','yamaha','suzuki']motorcycles.insert(0,'ducati')print(motorcycles) 方法insert()在索引0处添加空间，并将值’ducati’存储到这个地方。这种操作将列表中既有的每个元素都右移一个位置： 从列表中删除元素使用del语句删除元素1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[0]print(motorcycles) 使用del删除了列表motorcycles中的第一个元素——‘honda’： 使用del可删除任何位置处的列表元素，条件是知道其索引。下例演示了如何删除前述列表中的第二个元素——‘yamaha’： 1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[1]print(motorcycles) 使用pop()删除元素]]></content>
+      <categories>
+        <category>python</category>
+        <category>python学习笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>python学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python学习--10分钟看懂函数]]></title>
+    <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0--10%E5%88%86%E9%92%9F%E7%9C%8B%E6%87%82%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[Python函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。 定义一个函数你可以定义一个由自己想要功能的函数，以下是简单的规则： 函数代码块以 def 关键词开头，后接函数标识符名称和圆括号() 和： 任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。 ​ 1234def functionname( parameters ): "函数_文档字符串" function_suite return [expression]]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>
