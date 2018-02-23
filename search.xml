@@ -1,51 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[深度学习预备知识]]></title>
-    <url>%2F2018%2F02%2F23%2F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[摘要​ 深度学习的理论和模型涉及较多的知识，包括矩阵运算、概率论、信息论、图模型、马尔可夫链蒙特卡罗等方法等等。本文主要对这些预备知识进行梳理和介绍。 矩阵运算​ 给定两个$A=(a_{ij})_{mn}$和$B=(b_{ij})_{mn}$，他们的阿达马积和克罗内克积定义如下 Hadamard product： ​ $A \circ B=(a_{ij}\cdot b_{ij})$ ，又称逐元素积 Kronnecker Product： \begin{equation} A\otimes B =\begin{bmatrix} a_{11}B & \cdots\ &a_{1n}B\\ \vdots & \ddots & \vdots \\ a_{m1}B & \cdots\ & a_{mn}B\\ \end{bmatrix} \end{equation}概率论的基本概念最大似然估计​ 大量随机事件发生的真是概率通常是无法确知的，但通常可以采用事情发生的概率近似估计，这种用频率估计概率的方法称为最大似然估计。 条件概率​ 如果两个事件$A,B\subseteq \Omega ,P(B)&gt;0$,那么在给定$B$时，A的条件概率定义为 P(A\mid B)=\frac{P(AB)}{P(B)}=\frac{P(A \cap B)}{P(B)}条件概率$P(A\mid B)$是假定时间$B$发生的情况下事件A发生的概率 ​ 如果$P(AB)=P(A)P(B)$,那么称事件A和B在概率分布$P$中独立，易知，当$P(A\mid B)=P(A)$、$P(B\mid A)=P(B)$、$P(A)=0$或$P(B)=0$ 事件$A$和$B$也是独立的。 随机变量和概率密度函数期望和方差信息论的基本概念]]></content>
-      <categories>
-        <category>深度学习</category>
-        <category>预备知识</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>预备知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Github简明教程]]></title>
-    <url>%2F2017%2F12%2F19%2Fgithub%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[什么是Github​ GitHub 是为开发者提供Git 仓库的托管服务。这是一个让开发者与朋友、同事、同学及陌生人共享代码的完美场所。GitHub 公司总部位于美国旧金山，拥有一只不知是章鱼还是猫的吉祥octocat。 GitHub 与Git 的区别​ 在Git 中，开发者将源代码存入名叫“Git 仓库”的资料库中并加以使用。而GitHub 则是在网络上提供Git 仓库的一项服务。也就是说，GitHub 上公开的软件源代码全都由Git 进行管理。 Windows下Git的安装在Windows 环境中，最简单快捷的方法是使用msysGit。安装包下载完毕后，只要双击运行，按照向导一步步安装即可。 初始设置设置姓名和邮箱地址首先来设置使用Git 时的姓名和邮箱地址。名字请用英文输入。 12$ git config --global user.name &quot;Firstname Lastname&quot;$ git config --global user.email &quot;your_email@example.com&quot; 这里设置的姓名和邮箱地址会用在Git 的提交日志中。 提高命令输出的可读性顺便一提，将color.ui 设置为auto 可以让命令的输出拥有更高的可读性。 1$ git config --global color.ui auto 使用Github的前期准备创建账户打开账户创建页面，填写完所有项目后点击Create an account，就能完成账户的创建。 设置SSH KeyGitHub 上连接已有仓库时的认证，是通过使用了SSH 的公开密钥认证方式进行的。现在让我们来创建公开密钥认证所需的SSH Key，并将其添加至GitHub 运行下面的命令创建SSH Key。 1234567$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;Generating public/private rsa key pair.Enter file in which to save the key(/Users/your_user_directory/.ssh/id_rsa): 按回车键Enter passphrase (empty for no passphrase): 输入密码Enter same passphrase again: 再次输入密码 “your_email@example.com”的部分请改成您在创建账户时用的邮箱地址。密码需要在认证时输入，请选择复杂度高并且容易记忆的组合。输入密码后会出现以下结果。 123456789Your identification has been saved in /Users/your_user_directory/.ssh/id_rsa.Your public key has been saved in /Users/your_user_directory/.ssh/id_rsa.pub.The key fingerprint is:fingerprint值 your_email@example.comThe key&apos;s randomart image is:+--[ RSA 2048]----+| .+ + || = o O . |.... id_rsa 文件是私有密钥，id_rsa.pub 是公开密钥。 添加公开密钥在GitHub 中添加公开密钥，今后就可以用私有密钥进行认证了。 点击右上角的账户设定按钮（Account Settings），选择SSH Keys 菜单。点击Add SSH Key 之后，会出现如图3.2 的输入框。在Title 中输入适当的密钥名称。Key 部分请粘贴id_rsa.pub 文件里的内容。id_rsa.pub的内容可以用如下方法查看。 12$ cat ~/.ssh/id_rsa.pubssh-rsa 公开密钥的内容 your_email@example.com 添加成功之后，创建账户时所用的邮箱会接到一封提示“公共密钥添加完成”的邮件。 完成以上设置后，就可以用手中的私人密钥与GitHub 进行认证和通信了。让我们来实际试一试。 1234$ ssh -T git@github.comThe authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.RSA key fingerprint is fingerprint值 .Are you sure you want to continue connecting (yes/no)? 输入yes 出现以下结果即为成功 12Hi hirocastest! You&apos;ve successfully authenticated, but GitHub does notprovide shell access. 使用社区功能在创建账户后不妨试试Follow（关注）别人。在用户信息页面的右上角点击如图3.3 所示的按钮即可 这样一来，您所Follow 的用户的活动就会显示在您的控制面板页面中。您可以通过这种方法知道那个人在GitHub 上都做了些什么。]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[python学习--10分钟看懂函数]]></title>
-    <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0--10%E5%88%86%E9%92%9F%E7%9C%8B%E6%87%82%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[Python函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。 定义一个函数你可以定义一个由自己想要功能的函数，以下是简单的规则： 函数代码块以 def 关键词开头，后接函数标识符名称和圆括号() 和： 任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。 ​ 1234def functionname( parameters ): "函数_文档字符串" function_suite return [expression]]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[python学习笔记——修改添加和删除元素]]></title>
-    <url>%2F2017%2F11%2F22%2Fpython%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%2F</url>
-    <content type="text"><![CDATA[在列表中任意位置插入元素123motorcycles=['honda','yamaha','suzuki']motorcycles.insert(0,'ducati')print(motorcycles) 方法insert()在索引0处添加空间，并将值’ducati’存储到这个地方。这种操作将列表中既有的每个元素都右移一个位置： 从列表中删除元素使用del语句删除元素1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[0]print(motorcycles) 使用del删除了列表motorcycles中的第一个元素——‘honda’： 使用del可删除任何位置处的列表元素，条件是知道其索引。下例演示了如何删除前述列表中的第二个元素——‘yamaha’： 1234motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]print(motorcycles)del motorcycles[1]print(motorcycles) 使用pop()删除元素]]></content>
-      <categories>
-        <category>python</category>
-        <category>python学习笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>python学习笔记</tag>
-      </tags>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[深度学习预备知识]]></title>
+      <url>/2018/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
+      <content type="html"><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>​    深度学习的理论和模型涉及较多的知识，包括矩阵运算、概率论、信息论、图模型、马尔可夫链蒙特卡罗等方法等等。本文主要对这些预备知识进行梳理和介绍。</p>
+<h2 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h2><p>​    给定两个 $A=(a_{ij})_{m\times n}  $$,B=(b_{ij})_{m\times n }$，他们的阿达马积和克罗内克积定义如下</p>
+<p><u><strong>Hadamard product：</strong></u> </p>
+<p>​                            $A \circ  B=(a_{ij}\cdot b_{ij})​$ ，又称逐元素积</p>
+<p><strong><u>Kronnecker Product：</u></strong> </p>
+<script type="math/tex; mode=display">
+\begin{equation}
+A\otimes B
+=\begin{bmatrix}
+a_{11}B    & \cdots\ &a_{1n}B\\
+
+ \vdots   & \ddots  & \vdots  \\
+ a_{m1}B   & \cdots\ & a_{mn}B\\
+\end{bmatrix}
+\end{equation}</script><h2 id="概率论的基本概念"><a href="#概率论的基本概念" class="headerlink" title="概率论的基本概念"></a>概率论的基本概念</h2><h3 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h3><p>​    大量随机事件发生的真是概率通常是无法确知的，但通常可以采用事情发生的概率近似估计，这种用频率估计概率的方法称为<strong>最大似然估计</strong>。</p>
+<h3 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h3><p>​    如果两个事件$A,B\subseteq \Omega ,P(B)&gt;0$,那么在给定$B$时，A的<strong>条件概率</strong>定义为</p>
+<script type="math/tex; mode=display">
+P(A\mid B)=\frac{P(AB)}{P(B)}=\frac{P(A \cap B)}{P(B)}</script><p>条件概率$P(A\mid B)$是假定时间$B$发生的情况下事件A发生的概率</p>
+<p>​    如果$P(AB)=P(A)P(B)$,那么称事件A和B在概率分布$P$中<strong>独立</strong>，易知，当$P(A\mid B)=P(A)$、$P(B\mid A)=P(B)$、$P(A)=0$或$P(B)=0$ 事件$A$和$B$也是独立的。</p>
+<h3 id="随机变量和概率密度函数"><a href="#随机变量和概率密度函数" class="headerlink" title="随机变量和概率密度函数"></a>随机变量和概率密度函数</h3><h3 id="期望和方差"><a href="#期望和方差" class="headerlink" title="期望和方差"></a>期望和方差</h3><h2 id="信息论的基本概念"><a href="#信息论的基本概念" class="headerlink" title="信息论的基本概念"></a>信息论的基本概念</h2>]]></content>
+      
+        <categories>
+            
+            <category> 深度学习 </category>
+            
+            <category> 预备知识 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 预备知识 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python学习--10分钟看懂函数]]></title>
+      <url>/2017/11/22/python%E5%AD%A6%E4%B9%A0--10%E5%88%86%E9%92%9F%E7%9C%8B%E6%87%82%E5%87%BD%E6%95%B0/</url>
+      <content type="html"><![CDATA[<h2 id="Python函数"><a href="#Python函数" class="headerlink" title="Python函数"></a>Python函数</h2><p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。</p>
+<p>函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
+<h2 id="定义一个函数"><a href="#定义一个函数" class="headerlink" title="定义一个函数"></a>定义一个函数</h2><p>你可以定义一个由自己想要功能的函数，以下是简单的规则：</p>
+<ul>
+<li>函数代码块以 <strong>def</strong> 关键词开头，后接函数标识符名称和圆括号<strong>()</strong> 和：</li>
+<li>任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。</li>
+<li>​</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">functionname</span><span class="params">( parameters )</span>:</span></span><br><span class="line">   <span class="string">"函数_文档字符串"</span></span><br><span class="line">   function_suite</span><br><span class="line">   <span class="keyword">return</span> [expression]</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python学习笔记——修改添加和删除元素]]></title>
+      <url>/2017/11/22/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0/</url>
+      <content type="html"><![CDATA[<h3 id="在列表中任意位置插入元素"><a href="#在列表中任意位置插入元素" class="headerlink" title="在列表中任意位置插入元素"></a>在列表中任意位置插入元素</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
+<p>方法insert()在索引0处添加空间，并将值’ducati’存储到这个地方。这种操作将列表中既有的每个元素都右移一个位置：</p>
+<h3 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h3><h4 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]</span><br><span class="line">print(motorcycles)</span><br><span class="line">del motorcycles[0]</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
+<p>使用del删除了列表motorcycles中的第一个元素——‘honda’：</p>
+<p>使用del可删除任何位置处的列表元素，条件是知道其索引。下例演示了如何删除前述列表<br>中的第二个元素——‘yamaha’：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]</span><br><span class="line">print(motorcycles)</span><br><span class="line">del motorcycles[1]</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
+<h4 id="使用pop-删除元素"><a href="#使用pop-删除元素" class="headerlink" title="使用pop()删除元素"></a>使用pop()删除元素</h4>]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+            <category> python学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> python学习笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
 </search>
