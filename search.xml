@@ -46,35 +46,6 @@ P(A\mid B)=\frac{P(AB)}{P(B)}=\frac{P(A \cap B)}{P(B)}</script><p>条件概率$P
     </entry>
     
     <entry>
-      <title><![CDATA[python学习--10分钟看懂函数]]></title>
-      <url>/2017/11/22/python%E5%AD%A6%E4%B9%A0--10%E5%88%86%E9%92%9F%E7%9C%8B%E6%87%82%E5%87%BD%E6%95%B0/</url>
-      <content type="html"><![CDATA[<h2 id="Python函数"><a href="#Python函数" class="headerlink" title="Python函数"></a>Python函数</h2><p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。</p>
-<p>函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
-<h2 id="定义一个函数"><a href="#定义一个函数" class="headerlink" title="定义一个函数"></a>定义一个函数</h2><p>你可以定义一个由自己想要功能的函数，以下是简单的规则：</p>
-<ul>
-<li>函数代码块以 <strong>def</strong> 关键词开头，后接函数标识符名称和圆括号<strong>()</strong> 和：</li>
-<li>任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。</li>
-<li>​</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">functionname</span><span class="params">( parameters )</span>:</span></span><br><span class="line">   <span class="string">"函数_文档字符串"</span></span><br><span class="line">   function_suite</span><br><span class="line">   <span class="keyword">return</span> [expression]</span><br></pre></td></tr></table></figure>
-]]></content>
-      
-        <categories>
-            
-            <category> python </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[python学习笔记——修改添加和删除元素]]></title>
       <url>/2017/11/22/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BF%AE%E6%94%B9%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0/</url>
       <content type="html"><![CDATA[<h3 id="在列表中任意位置插入元素"><a href="#在列表中任意位置插入元素" class="headerlink" title="在列表中任意位置插入元素"></a>在列表中任意位置插入元素</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
@@ -99,6 +70,35 @@ P(A\mid B)=\frac{P(AB)}{P(B)}=\frac{P(A \cap B)}{P(B)}</script><p>条件概率$P
             <tag> python </tag>
             
             <tag> python学习笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python学习--10分钟看懂函数]]></title>
+      <url>/2017/11/22/python%E5%AD%A6%E4%B9%A0--10%E5%88%86%E9%92%9F%E7%9C%8B%E6%87%82%E5%87%BD%E6%95%B0/</url>
+      <content type="html"><![CDATA[<h2 id="Python函数"><a href="#Python函数" class="headerlink" title="Python函数"></a>Python函数</h2><p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。</p>
+<p>函数能提高应用的模块性，和代码的重复利用率。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
+<h2 id="定义一个函数"><a href="#定义一个函数" class="headerlink" title="定义一个函数"></a>定义一个函数</h2><p>你可以定义一个由自己想要功能的函数，以下是简单的规则：</p>
+<ul>
+<li>函数代码块以 <strong>def</strong> 关键词开头，后接函数标识符名称和圆括号<strong>()</strong> 和：</li>
+<li>任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。</li>
+<li>​</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">functionname</span><span class="params">( parameters )</span>:</span></span><br><span class="line">   <span class="string">"函数_文档字符串"</span></span><br><span class="line">   function_suite</span><br><span class="line">   <span class="keyword">return</span> [expression]</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
             
         </tags>
         
